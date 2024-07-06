@@ -1,0 +1,236 @@
+.HomeContainer {
+    background-color: rgb(225, 241, 255);
+    height: auto;
+    display: grid;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ButtonResume {
+    height: 35px;
+    width: 130px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: black;
+    border-width: 1px;
+    border-color: rgb(11, 72, 165);
+    background-color: transparent;
+    font-weight: 500;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    color: rgb(11, 72, 165);
+}
+
+.imME {
+    height: 400px;
+    width: 400px;
+    object-fit: contain;
+    padding-left: 15px;
+}
+
+.Home1 {
+    display: flex;
+    padding-left: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Home2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 200px;
+}
+
+
+.Home11 {
+    padding: 50px;
+    display: grid;
+    grid-template-rows: 10px 65px 100px 100px;
+}
+
+.HelloLine {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 70px 10px 100px;
+}
+
+.HomeLine {
+    margin-top: 11px;
+    height: 1px;
+    background-color: grey;
+    width: 70px;
+}
+
+.NameHead {
+    display: grid;
+    grid-template-columns: 220px 1px 350px;
+}
+
+.AbdullahText {
+    font-size: 35px;
+    margin-top: 20px;
+    color: rgb(27, 78, 146);
+}
+
+.ObjectiveText {
+    padding-right: 30px;
+    opacity: 0.8;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.Home2Buttons {
+    display: grid;
+    grid-template-rows: 50px 200px;
+}
+
+.ButtonResume {
+    height: 40px;
+    width: 180px;
+    font-size: 14px;
+    margin-top: -10px;
+    font-family: 'Courier New', Courier, monospace;
+    border-width: 1px;
+    color: rgb(16, 46, 80);
+}
+
+.ButtonResume:hover {
+    background-color: rgb(20, 62, 141);
+    color: aliceblue;
+}
+
+.ButtonResume:hover .pdfIcon {
+    color: aliceblue;
+}
+
+.TouchSubHead {
+    color: rgb(10, 54, 150);
+    display: flex;
+    gap: 4px;
+    font-size: 18px;
+}
+
+.pdfIcon {
+    color: rgb(14, 91, 179);
+}
+
+.Nameis {
+    margin-top: 30px;
+    font-size: 25px;
+    opacity: 0.9;
+}
+
+.Touchicon {
+    transition: 0.1s ease-out;
+    margin-top: 4px;
+    animation: float 2s infinite;
+    animation-delay: 4s;
+    opacity: 0;
+}
+
+@keyframes float {
+    0% {
+        opacity: 1;
+        transform: translateY(2px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(2px);
+    }
+}
+
+.TypeText {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-top: -35px;
+    color: rgb(15, 66, 133);
+    padding-left: 40px;
+}
+
+.cursor {
+    display: inline-block;
+    margin-left: 0px;
+    width: 5px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .HomeContainer {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .Home1{
+        padding: 0;
+        margin: 0;
+    }
+    .Home11{
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-rows: 10px 65px 100px 100px;
+    }
+    .Home2{
+        margin: 0;
+        padding: 0;
+    }
+}
+@media (max-width: 480px) {
+    .HomeContainer {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .Home1{
+        padding: 0;
+        margin: 0;
+    }
+    .Home11{
+        padding: 0;
+        display: grid;
+        grid-template-rows: 10px 65px 100px 100px;
+        background-color: #124686;
+        width: 400px;
+    }
+    .Home2{
+        margin: 0;
+        padding: 0;
+        margin-right: 220px;
+        margin-left: -40px;
+    }
+    .ObjectiveText{
+        margin-right: 210px;
+    }
+    .imME{
+        height: 250px;
+        width: 250px;
+        object-fit: contain;
+    }
+    .AbdullahText{
+        font-size: 25px;
+    }
+}

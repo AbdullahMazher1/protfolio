@@ -1,38 +1,1317 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Base styles */
+.Navbar {
+    position: sticky;
+    background-color: white;
+    height: 90px;
+    border-bottom: 2px rgb(235, 235, 235) solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .navbarleft {
+    display: flex;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .navbarName {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(20, 83, 165);
   }
+  
+  .navbarlinks {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .buttonpanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navbarbuttons {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: rgb(15, 44, 82);
+    transition: transform 0.1s;
+  }
+  
+  .navbarbuttons:hover {
+    transform: scale(1.1);
+  }
+  
+  .circle {
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    background-color: #08203d;
+    transition: opacity 0.2s;
+    opacity: 0;
+  }
+  
+  .navbarnext {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .navbarIcons {
+    cursor: pointer;
+    color: #124686;
+  }
+  
+  .navbarMenuIcon {
+    display: none;
+    cursor: pointer;
+    color: #124686;
+  }
+  
+  .navbarPopup {
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1001;
+  }
+  
+  .navbarPopupButtons {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: rgb(15, 44, 82);
+    text-align: left;
+  }
+  
+  @media (max-width: 768px) {
+    .navbarleft, .navbarlinks {
+      display: none;
+    }
+  
+    .navbarnext {
+      display: flex;
+      order: -1; /* Move to the start */
+      margin-right: auto; /* Align to the left */
+    }
+  
+    .navbarMenuIcon {
+      display: block;
+    }
+  }
+  
+/*-----------------------------------------Home -----------------------------------*/
+.myHome {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    background-color: #cce2fc;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.myHomeleft {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+}
+
+.myHomenext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imME {
+    height: 400px;
+    width: 400px;
+    object-fit: contain;
+}
+
+.Nameis {
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+.AbdullahText {
+    padding-left: 10px;
+    color: rgb(10, 40, 78);
+    font-weight: 700;
+}
+
+.NameHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0;
+    margin-top: -10px;
+}
+
+.ObjectiveText {
+    opacity: 0.8;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.Home2Buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.TouchSubHead {
+    color: rgb(10, 54, 150);
+    display: flex;
+    gap: 4px;
+    font-size: 18px;
+}
+
+.ButtonResume {
+    margin-top: 5px;
+    height: 35px;
+    width: 130px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: black;
+    border-width: 1px;
+    border-color: rgb(11, 72, 165);
+    background-color: transparent;
+    font-weight: 500;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    color: rgb(11, 72, 165);
+}
+
+.ButtonResume {
+    height: 40px;
+    width: 180px;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    border-width: 1px;
+    color: rgb(16, 46, 80);
+}
+
+.ButtonResume:hover {
+    background-color:#134874;
+    border: 1px solid white;
+    color: aliceblue;
+}
+
+.ButtonResume:hover .pdfIcon {
+    color: aliceblue;
+}
+
+.TypeText {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-top: -30px;
+    color: rgb(15, 66, 133);
+    padding-left: 40px;
+}
+
+.Touchicon {
+    transition: 0.1s;
+    margin-top: 4px;
+    animation: float 1.7s infinite;
+    opacity: 0;
+    padding-left: 1px;
+}
+
+.HelloAndLine {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Line {
+    background-color: #000000;
+    opacity: 0.5;
+    width: 80px;
+    margin-top: 18px;
+}
+
+.Hello {
+    padding-left: 10px;
+}
+
+@keyframes float {
+    0% {
+        opacity: 1;
+        transform: translateY(2px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(2px);
+    }
+}
+
+@media (max-width: 720px) {
+    .myHome {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .myHome {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+        margin: 0;
+        background-color: rgb(244, 249, 253);
+    }
+
+    .myHomeleft {
+        padding: 0;
+        margin: 0;
+        margin-right: 20px;
+        padding-left: 20px;
+        padding-top: 50px;
+    }
+
+    .imME {
+        height: 280px;
+        width: 280px;
+    }
+
+    .myHomenext {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .Nameis {
+        font-size: 16px;
+    }
+
+    .AbdullahText {
+        margin-top: 7px;
+        font-size: 26px;
+    }
+
+    .TypeText {
+        font-family: Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        margin-top: -5px;
+        color: rgb(15, 66, 133);
+    }
+
+    .ButtonResume {
+        height: 40px;
+        width: 180px;
+        padding-left: 12px;
+    }
+
+    .Touchicon {
+        color: #0b3b77;
+    }
+
+    .TouchSubHead {
+        color: #0b3b77;
+    }
+
+    .ObjectiveText {
+        opacity: 0.7;
+    }
+
+
+}
+
+/*-----------------------------------------Home -----------------------------------*/
+
+
+
+
+/*-----------------------------------------Skills Container -----------------------------------*/
+.SkillsContainer {
+    padding-top: 20px;
+    display: grid;
+    grid-template-rows: auto auto;
+    height: auto;
+    width: auto;
+    margin-bottom: 50px;
+}
+
+.Skills1 {
+    display: grid;
+    grid-template-columns: 0.45fr 1fr;
+    height: auto;
+}
+
+.Skills1Left {
+    padding-top: 90px;
+    display: grid;
+    grid-template-rows: 55px 20px;
+    align-items: center;
+    justify-items: center;
+    padding-left: 30px;
+}
+
+.Skills1Next {
+    display: grid;
+    grid-template-columns: 0.01fr 1fr;
+}
+
+.SkillsLine {
+    rotate: 90deg;
+    width: 60px;
+    color: black;
+    height: 2px;
+    border: none;
+    background-color: black;
+    opacity: 0.5;
+    margin-top: 118px;
+}
+
+.SkilssPara {
+    color: rgb(82, 82, 82);
+    padding-top: 80px;
+    padding-right: 80px;
+    margin-left: -20px;
+    text-align: justify;
+}
+
+.SkillsHead {
+    font-size: 40px;
+    color: rgb(15, 66, 133);
+    align-items: center;
+}
+
+.SkillsSubContent {
+    font-family: 'Courier New', Courier, monospaces;
+}
+
+@media (max-width: 480px) {
+    .Skills1 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .SkillsNext {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .Skills1Left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        margin-top: 50px;
+    }
+
+    .SkillsLine {
+        opacity: 0;
+    }
+
+    .SkilssPara {
+        color: rgb(82, 82, 82);
+        padding-top: 80px;
+        padding-right: 40px;
+        padding-left: 5px;
+        text-align: justify;
+    }
+
+}
+
+/*---------------------------------Skills Display------------------------------*/
+
+.SkillsDisplay {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 50px;
+}
+
+.SkillsNext {
+    display: grid;
+    grid-template-rows: 70px 60px 60px 60px 60px 60px;
+}
+
+.SkillsShowHead {
+    padding-left: 5px;
+    color: rgb(12, 75, 133);
+}
+
+.ImSkills {
+    height: 600px;
+    width: 600px;
+    object-fit: contain;
+    padding-left: 120px;
+    margin-top: -120px;
+}
+
+.ProgressBar {
+    background-color: rgb(238, 237, 237);
+    display: flex;
+    border-radius: 10px;
+}
+
+.SkillShowBar {
+    padding-right: 200px;
+    margin: 5px;
+}
+
+.ProgressPercent1,
+.ProgressPercent2,
+.ProgressPercent3,
+.ProgressPercent4,
+.ProgressPercent5 {
+    width: 0%;
+    margin: 2px;
+    transition: 1s ease-out;
+    transition-delay: 0.1s;
+    border-radius: 10px;
+}
+
+.SkillsDisplay:hover {
+    .ProgressPercent1 {
+        width: 90%;
+        background-color: rgb(241, 88, 177);
+    }
+
+    .ProgressPercent2 {
+        width: 90%;
+        background-color: rgb(74, 202, 117);
+    }
+
+    .ProgressPercent3 {
+        width: 75%;
+        background-color: rgb(129, 34, 207);
+    }
+
+    .ProgressPercent4 {
+        width: 80%;
+        background-color: rgb(19, 68, 160);
+    }
+
+    .ProgressPercent5 {
+        width: 80%;
+        background-color: rgb(35, 139, 224);
+    }
+}
+
+.SkillShowBar {
+    display: grid;
+    grid-template-rows: 20px 15px 10px;
+}
+
+.SkillDisp {
+    opacity: 0.6;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+@media (max-width: 480px) {
+    .SkillsDisplay {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .SkillsLeft {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ImSkills {
+        width: 350px;
+        height: 350px;
+        object-fit: contain;
+        margin-top: -50px;
+        padding: 0;
+    }
+
+    .SkillShowBar {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .SkillsShowHead {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: 600;
+        color: rgb(12, 75, 133);
+        font-family: monospace;
+        font-size: 25px;
+    }
+
+    .SkillDisp {
+        font-size: 10px;
+    }
+}
+
+
+/*---------------------------------Services------------------------------*/
+.ServiveContainer {
+    margin-top: 50px;
+    background-color: rgb(18, 76, 122);
+    display: grid;
+    grid-template-rows: auto auto;
+    height: auto;
+    padding-bottom: 50px;
+}
+
+.ServicesTop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 40px;
+}
+
+.Service01,
+.Servive02,
+.Service03 {
+    margin: 25px;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    padding-top: 20px;
+    background-color: rgb(249, 250, 255);
+    display: flex;
+    flex-direction: column;
+    height: 380px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.WebService:hover .Web {
+    transform: translateY(-15px);
+    rotate: 10deg;
+}
+
+.iosDervice:hover .ios {
+    transform: translateY(-15px);
+    rotate: 10deg;
+}
+
+.SoftService:hover .soft {
+    transform: translateY(-15px);
+    rotate: 10deg;
+}
+
+.WrodpressService:hover .wordpress {
+    transform: translateY(-15px);
+    rotate: 10deg;
+}
+
+.DServices:hover .Graphic {
+    transform: translateY(-15px);
+    rotate: 10deg;
+}
+
+.ProducServices:hover .product {
+    transform: translateY(-15px);
+    rotate: 10deg;
+}
+
+.WebPara {
+    padding: 20px;
+    opacity: 0.9;
+    font-size: 15px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s ease-out;
+}
+
+.ServiceHead {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.WebIcon {
+    height: 50px;
+    width: 50px;
+    margin-top: 50px;
+    object-fit: contain;
+    transition: 0.2s ease-out;
+}
+
+.Graphic {
+    height: 45px;
+    width: 45px;
+    object-fit: contain;
+}
+
+.Web {
+    height: 55px;
+    width: 55px;
+    object-fit: contain;
+}
+
+.ReadMore {
+    margin-top: 10px;
+}
+
+@media (max-width: 720px) {
+    .ServicesTop {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+}
+
+/*---------------------------------Profile------------------------------*/
+.Experience {
+    margin-bottom: 100px;
+}
+
+.Experience1 {
+    padding-top: 100px;
+}
+
+.Experience2 {
+    margin-top: -50px;
+}
+
+.ProfileContainer {
+    padding-left: 200px;
+    padding-right: 200px;
+    display: grid;
+    grid-template-rows: 20px 225px 10px;
+}
+
+.ProfileHead {
+    color: rgb(10, 72, 122);
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+.ProfileLine {
+    background-color: rgb(192, 192, 192);
+    opacity: 0.5;
+}
+
+.Company1 {
+    display: grid;
+    grid-template-columns: 0.21fr 1fr;
+}
+
+.ImCharcoal {
+    margin-top: 5px;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border: 1px solid rgb(175, 175, 175);
+}
+
+.Company1Next {
+    display: grid;
+    grid-template-rows: 45px 30px 25px 30px 30px;
+    padding-left: 20px;
+}
+
+.Company1Duration {
+    opacity: 0.8;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.Company1Location {
+    opacity: 0.8;
+}
+
+.Company1Discp {
+    text-align: justify;
+}
+
+@media (max-width: 1200px) {
+    .ProfileContainer {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    .ProfileContainer {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .Company1 {
+        grid-template-columns: 0.3fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .ProfileContainer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .Company1 {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .ImCharcoal {
+        width: 150px;
+        height: 150px;
+    }
+
+    .Company1Next {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .ProfileContainer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .ImCharcoal {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        margin-bottom: 10px;
+    }
+
+    .Experience1 {
+        padding-top: 50px;
+        padding-left: 5px;
+        padding-right: 10px;
+    }
+
+    .Experience2 {
+        margin-top: 0;
+        padding-left: 5px;
+        padding-right: 10px;
+    }
+
+    .Company1Head {
+        font-size: 25px;
+    }
+
+    .Company1Name {
+        margin-top: -10px;
+    }
+
+    .Company1Discp {
+        font-size: 15px;
+    }
+
+    .Company1Discp {
+        font-size: 13px;
+    }
+}
+
+/*-----------------------------------Projects-----------------------------------*/
+
+.NewProjectSubHead {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.NewProjectsHead {
+    font-weight: 700;
+    color: #17365c;
+    letter-spacing: 2px;
+}
+
+.Newprojects {
+    display: grid;
+    background-color: rgb(234, 243, 247);
+    height: auto;
+    grid-template-rows: auto auto;
+    padding: 20px;
+}
+
+.ProjectsPara {
+    text-align: justify;
+}
+
+.ProjectsUpper {
+    margin: 12%;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.NewProjectsBottom {
+    height: 410px;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    margin-top: 70px;
+    grid-template-columns: 0.5fr 1fr;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px #08203d solid;
+    opacity: 0;
+    transition: 1s ease-out;
+}
+
+.ImProjectDisplay {
+    border-radius: 5px;
+    margin-left: 17px;
+    margin-right: 15px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    width: 95%;
+    object-fit: contain;
+}
+
+.Improjectlo {
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+}
+
+.NewProjectType {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ProjectsDisplayLeft {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.Navigateicons {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.ProjectCircles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 4px;
+}
+
+.circle1,
+.circle2,
+.circle3 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #08203d;
+    transition: 0.2s ease-out;
+    opacity: 1;
+}
+
+.NewProjectsHead {
+    letter-spacing: normal;
+    font-weight: 600;
+}
+
+
+.Newprojectdiscprition {
+    margin: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.NewProjectTitle {
+    margin-top: 5px;
+    margin-left: 10px;
+    color: #cce2fc;
+}
+
+.NewProjectViewButton {
+    margin: 15px;
+    padding: 5px;
+    background-color: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    border: 1px black solid;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.ProjectsDisplayNext {
+    background-color: #08203d;
+    display: grid;
+    grid-template-rows: 20px auto;
+}
+
+@media (max-width: 768px) {
+    .NewProjectsBottom {
+        grid-template-columns: 1fr;
+        margin: 5%;
+    }
+
+    .ImProjectDisplay {
+        width: 100%;
+    }
+
+    .ProjectsUpper {
+        margin: 5%;
+    }
+
+    .NewProjectsHead {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ProjectsUpper {
+        margin: 5%;
+    }
+
+    .NewProjectsBottom {
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 70px;
+    }
+
+    .ProjectsPara {
+        font-size: 13px;
+    }
+
+    .ImProjectDisplay {
+        margin-top: 15px;
+        margin-left: 8px;
+        width: 95%;
+    }
+
+    .NewProjectsHead {
+        letter-spacing: 0px;
+        font-size: 20px;
+    }
+
+    .ProjectsDisplayLeft {
+        margin: 10px;
+    }
+
+    .Newprojectdiscprition {
+        font-size: 12px;
+    }
+
+    .NewProjectTitle {
+        font-size: 18px;
+    }
+}
+
+.dot1,
+.dot2,
+.dot3,
+.dot4,
+.dot5 {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #08203d;
+    transition: 0.1s ease-out;
+    opacity: 0;
+}
+
+.Navbar1 {
+    margin-top: 10px;
+    margin-left: 150px;
+    display: grid;
+    grid-template-columns: 150px 100px 100px 100px 100px 100px 100px;
+}
+
+.Button1 {
+    margin-top: 15px;
+    background-color: transparent;
+    border: none;
+    transition: 0.1s;
+}
+
+.Button1:hover {
+    color: #08203d;
+    transform: scale(1.1);
+}
+
+/*-------------------------------Contact---------------------------------*/
+.ProfileContainer {
+    margin-top: 50px;
+    display: grid;
+    grid-template-rows: 1fr;
+    height: auto;
+}
+
+.ProfileItemLeft {
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    transition: 0.5s ease-out;
+}
+
+.profileHead2 {
+    text-align: justify;
+    opacity: 0.8;
+    font-size: 16px;
+}
+
+.ProfileButton2 {
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid;
+    height: 42px;
+    width: 150px;
+    font-size: 15px;
+    margin-top: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.WhatsappIcon {
+    color: #152F4F;
+    padding-right: 5px;
+}
+
+.ProfileButton2:hover {
+    background-color: #152F4F;
+    color: #cce2fc;
+    border: none;
+
+    .WhatsappIcon {
+        color: aliceblue;
+    }
+}
+
+.ProfileHead1 {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 20px;
+    color: #08203d;
+
+}
+
+.ProfileHead3 {
+    color: #124686;
+    font-size: 40px;
+    margin-top: -10px;
+    font-weight: 650;
+}
+
+@media (max-width: 720px) {
+    .ProfileContainer {
+        place-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .ProfileItemLeft {
+        margin-left: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-right: 0px;
+    }
+
+    .ProfileHead3 {
+        margin-right: 30px;
+        font-size: 42px;
+        font-weight: 700;
+        color: #134874;
+    }
+
+    .profileHead2 {
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    .ProfileContainer:hover .Taptoview {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .ProfileItemNext:hover .Taptoview1 {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 480px) {
+    .ProfileItemLeft {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .ProfileHead3 {
+        font-size: 40px;
+    }
+}
+
+/*-----------------------------Values-------------------------------*/
+.ValuesContainer {
+    height: 700px;
+    display: grid;
+    grid-template-rows: 150px auto;
+    border: solid rgb(237, 243, 253);
+    border-width: 2px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.Valuesline {
+    color: #08203d;
+    height: 1px;
+}
+
+.ValuesUpperContainer {
+    display: grid;
+    grid-template-rows: 0.5fr 0.1fr;
+    margin-top: 25px;
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Impact';
+    color: rgb(228, 242, 253);
+    letter-spacing: 10px;
+}
+
+.ValuesOUR {
+    color: #1c5eaf;
+}
+
+.ValuesText {
+    font-size: 40px;
+    margin-top: -100px;
+    margin-bottom: 100px;
+    letter-spacing: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(38, 83, 143);
+    transition: 2s ease-out;
+    text-align: center;
+}
+
+.ValuesBottomContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-in {
+    animation: slideIn 1s forwards;
+}
+
+.slide-out {
+    animation: slideOut 1s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 780px) {
+    .ValuesContainer {
+        height: 500px;
+    }
+
+    .ValuesUpperContainer {
+        font-size: 18px;
+    }
+
+    .ValuesText {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ValuesText {
+        font-size: 24px;
+        letter-spacing: 1px;
+        color: #0b3b77;
+    }
+
+    .ValuesUpperContainer {
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+}
+
+/*---------------------------------------Footer----------------------------*/
+.footer {
+    background: #152F4F;
+    color: white;
+
+    .links {
+        ul {
+            list-style-type: none;
+        }
+
+        li a {
+            color: white;
+            transition: color .2s;
+
+            &:hover {
+                text-decoration: none;
+                color: #4180CB;
+            }
+        }
+    }
+
+
+    .about-company {
+        i {
+            font-size: 25px;
+        }
+
+        a {
+            color: white;
+            transition: color .2s;
+
+            &:hover {
+                color: #4180CB
+            }
+        }
+    }
+
+    .location {
+        i {
+            font-size: 18px;
+        }
+
+        margin-top: 30px;
+    }
+
+    .copyright p {
+        border-top: 1px solid rgba(255, 255, 255, .1);
+    }
 }
