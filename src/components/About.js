@@ -51,7 +51,7 @@ export default function About() {
   };
 
   return (
-    <div className='HomeContainer'>
+    <div className='HomeContainer' id='home'>
       <div className='Home1'>
         <div className='Home11'>
           <div className='HelloLine'>

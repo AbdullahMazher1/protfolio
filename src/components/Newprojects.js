@@ -88,7 +88,7 @@ export default function Newprojects() {
   };
 
   return (
-    <div className='Newprojects' ref={ref}>
+    <div className='Newprojects' ref={ref} id='projects'>
       <div className='ProjectsUpper'>
         <h2 className='NewProjectsHead'>Deployed Projects</h2>
         <p className='ProjectsPara'>

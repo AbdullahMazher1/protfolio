@@ -70,9 +70,15 @@ export default function Home() {
         element1.style.opacity = '1';
         element1.style.transform = 'translateY(-50px)';
       }
+      const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = `${process.env.PUBLIC_URL}/resume.pdf`;
+        link.download = 'resume.pdf';
+        link.click();
+      };
 
     return (
-        <div className='myHome' ref={ref}>
+        <div className='myHome' ref={ref} id='home'>
             <div className='myHomeleft'>
                 <div className='HelloLine'>
                     <div className='HelloAndLine'>
@@ -110,7 +116,7 @@ export default function Home() {
                             <FaHandPointDown className='Touchicon' size={18} />
                         </h4>
                     </div>
-                    <button className='ButtonResume'>
+                    <button className='ButtonResume' onClick={handleDownload}>
                         <FaFilePdf className='pdfIcon' size={14} />
                         Download Resume
                     </button>

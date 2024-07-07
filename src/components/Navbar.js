@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaGithub, FaLinkedin, FaInstagram, FaBars } from 'react-icons/fa';
+import { Link as ScrollLink } from 'react-scroll';
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,27 +31,29 @@ export default function Navbar() {
       <div className='navbarlinks'>
         {['Home', 'About', 'Profile', 'Projects', 'Contact'].map((link, index) => (
           <div className='buttonpanel' key={link}>
-            <button
+            <ScrollLink
+              to={link.toLowerCase()}
+              smooth={true}
+              duration={500}
               className='navbarbuttons'
-              id={link}
               onMouseLeave={() => handleLeave(index + 1)}
               onMouseEnter={() => handleHover(index + 1)}
             >
               {link}
-            </button>
+            </ScrollLink>
             <div className={`circle c${index + 1}`}></div>
           </div>
         ))}
       </div>
       <div className='navbarnext'>
-      <a href="https://github.com/AbdullahMazher1" target="_blank" rel="noopener noreferrer">
-          <FaGithub size={22} className='navbaricons' color='#124686;' />
+        <a href="https://github.com/AbdullahMazher1" target="_blank" rel="noopener noreferrer">
+          <FaGithub size={22} className='navbaricons' color='black' />
         </a>
         <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-          <FaInstagram size={22} className='navbaricons' />
+          <FaInstagram size={22} className='navbaricons' color='black'/>
         </a>
         <a href="https://www.linkedin.com/in/abdullah-mazher-a8769b289/" target="_blank" rel="noopener noreferrer">
-          <FaLinkedin size={22} className='navbaricons' />
+          <FaLinkedin size={22} className='navbaricons' color='black'/>
         </a>
       </div>
       <div className='navbarMenuIcon'>
@@ -58,15 +61,17 @@ export default function Navbar() {
       </div>
       {menuOpen && (
         <div className='navbarPopup'>
-          {['Home', 'About', 'Profile', 'Projects', 'Contact'].map((link, index) => (
+          {['Home', 'About', 'Profile', 'Projects', 'Contact'].map((link) => (
             <div className='popupButtonPanel' key={link}>
-              <button
+              <ScrollLink
+                to={link.toLowerCase()}
+                smooth={true}
+                duration={500}
                 className='navbarPopupButtons'
-                id={link}
                 onClick={() => setMenuOpen(false)}
               >
                 {link}
-              </button>
+              </ScrollLink>
             </div>
           ))}
         </div>

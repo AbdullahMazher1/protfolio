@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Profile() {
   return (
-    <div className='Experience'>
+    <div className='Experience' id='profile'>
       <div className='Experience1'>
         <div className='ProfileContainer'>
           <div className=''>

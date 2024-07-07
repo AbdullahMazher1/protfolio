@@ -67,7 +67,7 @@ export default function SkillsDisplay() {
             </div>
           </div>
           <div className='SkillDisp'>
-            Intermediate rip on Html with hand zone experience of 3 years
+            Intermediate grip on Html with hand zone experience of 2 years
           </div>
         </div>
         <div className='SkillShowBar'>
@@ -80,7 +80,7 @@ export default function SkillsDisplay() {
             </div>
           </div>
           <div className='SkillDisp'>
-            Intermediate rip on Html with hand zone experience of 3 years
+            Intermediate grip on CSS with hand zone experience of 2 years
           </div>
         </div>
         <div className='SkillShowBar'>
@@ -93,7 +93,7 @@ export default function SkillsDisplay() {
             </div>
           </div>
           <div className='SkillDisp'>
-            Intermediate rip on Html with hand zone experience of 3 years
+            Intermediate grip on Html with hand zone experience of 2 years
           </div>
         </div>
         <div className='SkillShowBar'>
@@ -106,7 +106,7 @@ export default function SkillsDisplay() {
             </div>
           </div>
           <div className='SkillDisp'>
-            Intermediate rip on Html with hand zone experience of 3 years
+            Intermediate grip on Html with hand zone experience of 1 years
           </div>
         </div>
       </div>

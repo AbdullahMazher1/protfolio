@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export default function Services() {
 
     return (
-        <div className='ServiveContainer'>
+        <div className='ServiveContainer' id='profile'>
             <div className='ServicesTop'>
                 <div className='Service01 WebService'>
                     <h2 className='ServiceHead'>

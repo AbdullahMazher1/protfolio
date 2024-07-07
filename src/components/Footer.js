@@ -15,12 +15,12 @@ export default function Footer() {
             <div className="col-lg-2 col-xs-12 links">
               <h4 className="mt-lg-0 mt-sm-3">Links</h4>
               <ul className="m-0 p-0">
-                <li>- <a href="#header">Home</a></li>
-                <li>- <a href="#Container">About</a></li>
-                <li>- <a href="#ServicesContainer">Services</a></li>
-                <li>- <a href="#AnalyticsContainer">Profile</a></li>
-                <li>- <a href="#header">Contact Me</a></li>
-                <li>- <a href="#Projects">Deployed Projects</a></li>
+                <li>- <a href="#home">Home</a></li>
+                <li>- <a href="#about">About</a></li>
+                <li>- <a href="#profile">Services</a></li>
+                <li>- <a href="#projects">Profile</a></li>
+                <li>- <a href="#contact">Contact Me</a></li>
+                <li>- <a href="#projects">Deployed Projects</a></li>
               </ul>
             </div>
             <div className="col-lg-4 col-xs-12 location">

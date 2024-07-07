@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SkillSet() {
     return (
-        <div className='SkillsContainer'>
+        <div className='SkillsContainer' id='about'>
             <div className='Skills1'>
                 <div className='Skills1Left'>
                     <h1 className='SkillsHead'>

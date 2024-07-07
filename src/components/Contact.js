@@ -4,6 +4,12 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 
 const Contact = () => {
+    const openWhatsAppChat = () => {
+        const phoneNumber = '9203045678898';
+        const url = `https://wa.me/${phoneNumber}`;
+        window.open(url, '_blank');
+      };
+
     const { ref, inView } = useInView({
         threshold: 0.2,
         triggerOnce: true
@@ -26,7 +32,7 @@ const Contact = () => {
     }, [inView])
 
     return (
-        <div className='ProfileContainer' id='ProfileContainer' ref={ref}>
+        <div className='ProfileContainer' id='contact' ref={ref}>
             <div className='ProfileItemLeft'>
                 <div>
                     <h5 className='ProfileHead1'>
@@ -45,7 +51,7 @@ const Contact = () => {
                     </h1>
                 </div>
                 <div>
-                    <button className='ProfileButton2' >
+                    <button className='ProfileButton2' onClick={openWhatsAppChat}>
                         <FaWhatsapp size={20} className='WhatsappIcon'/>
                         Connect Now
                     </button>
