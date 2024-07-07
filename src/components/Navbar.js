@@ -43,9 +43,15 @@ export default function Navbar() {
         ))}
       </div>
       <div className='navbarnext'>
-        <FaGithub className='navbarIcons' size={22} />
-        <FaInstagram className='navbarIcons' size={22} />
-        <FaLinkedin className='navbarIcons' size={22} />
+      <a href="https://github.com/AbdullahMazher1" target="_blank" rel="noopener noreferrer">
+          <FaGithub size={22} className='navbaricons' color='#124686;' />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <FaInstagram size={22} className='navbaricons' />
+        </a>
+        <a href="https://www.linkedin.com/in/abdullah-mazher-a8769b289/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin size={22} className='navbaricons' />
+        </a>
       </div>
       <div className='navbarMenuIcon'>
         <FaBars onClick={toggleMenu} size={22} />

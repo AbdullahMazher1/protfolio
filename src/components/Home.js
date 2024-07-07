@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaFilePdf, FaHandPointDown } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
 
 export default function Home() {
     const texts = [
@@ -49,9 +50,29 @@ export default function Home() {
             </div>
         );
     };
+    const [ref, inView] = useInView({
+        threshold: 0.2,
+        triggerOnce: true,
+    });
+    useEffect(()=>{
+        if(inView){
+        setTimeout(() => {
+            HandleAnimation();
+        }, 100);
+        }
+    },[inView]);
+
+      function HandleAnimation(){
+        const element = document.querySelector('.myHomeleft');
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(-50px)';
+        const element1 = document.querySelector('.myHomenext');
+        element1.style.opacity = '1';
+        element1.style.transform = 'translateY(-50px)';
+      }
 
     return (
-        <div className='myHome'>
+        <div className='myHome' ref={ref}>
             <div className='myHomeleft'>
                 <div className='HelloLine'>
                     <div className='HelloAndLine'>
@@ -99,7 +120,7 @@ export default function Home() {
                     <img className='imME' src='1.png' alt="Abdullah Mazher" />
                 </div>
                 <div>
-                    <TypingEffect />
+                    <TypingEffect/>
                 </div>
             </div>
         </div>

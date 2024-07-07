@@ -9,69 +9,71 @@
     justify-content: space-between;
     padding: 0 20px;
     z-index: 1000;
-  }
-  
-  .navbarleft {
+}
+
+.navbarleft {
     display: flex;
     align-items: center;
-  }
-  
-  .navbarName {
+    margin-left: 10px;
+}
+
+.navbarName {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(20, 83, 165);
-  }
-  
-  .navbarlinks {
+}
+
+.navbarlinks {
     display: flex;
     gap: 10px;
     align-items: center;
-  }
-  
-  .buttonpanel {
+}
+
+.buttonpanel {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-  
-  .navbarbuttons {
+}
+
+.navbarbuttons {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 15px;
     color: rgb(15, 44, 82);
     transition: transform 0.1s;
-  }
-  
-  .navbarbuttons:hover {
+}
+
+.navbarbuttons:hover {
     transform: scale(1.1);
-  }
-  
-  .circle {
+}
+
+.circle {
     border-radius: 50%;
     height: 5px;
     width: 5px;
     background-color: #08203d;
     transition: opacity 0.2s;
     opacity: 0;
-  }
-  
-  .navbarnext {
+}
+
+.navbarnext {
     display: flex;
     gap: 10px;
-  }
-  
-  .navbarIcons {
+    margin-right: 20px;
+}
+
+.navbarIcons {
     cursor: pointer;
     color: #124686;
-  }
-  
-  .navbarMenuIcon {
+}
+
+.navbarMenuIcon {
     display: none;
     cursor: pointer;
     color: #124686;
-  }
-  
-  .navbarPopup {
+}
+
+.navbarPopup {
     position: absolute;
     top: 90px;
     right: 20px;
@@ -83,33 +85,37 @@
     flex-direction: column;
     gap: 10px;
     z-index: 1001;
-  }
-  
-  .navbarPopupButtons {
+}
+
+.navbarPopupButtons {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 15px;
     color: rgb(15, 44, 82);
     text-align: left;
-  }
-  
-  @media (max-width: 768px) {
-    .navbarleft, .navbarlinks {
-      display: none;
+}
+
+@media (max-width: 768px) {
+
+    .navbarleft,
+    .navbarlinks {
+        display: none;
     }
-  
+
     .navbarnext {
-      display: flex;
-      order: -1; /* Move to the start */
-      margin-right: auto; /* Align to the left */
+        display: flex;
+        order: -1;
+        /* Move to the start */
+        margin-right: auto;
+        /* Align to the left */
     }
-  
+
     .navbarMenuIcon {
-      display: block;
+        display: block;
     }
-  }
-  
+}
+
 /*-----------------------------------------Home -----------------------------------*/
 .myHome {
     display: grid;
@@ -123,6 +129,10 @@
     display: flex;
     flex-direction: column;
     padding: 100px;
+    transition: 1s ease;
+    margin-top: 50px;
+    transition-delay: 0.5s;
+    opacity: 0;
 }
 
 .myHomenext {
@@ -130,6 +140,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    margin-top: 100px;
+    transition: 1s ease;
 }
 
 .imME {
@@ -206,7 +219,7 @@
 }
 
 .ButtonResume:hover {
-    background-color:#134874;
+    background-color: #134874;
     border: 1px solid white;
     color: aliceblue;
 }
@@ -268,19 +281,28 @@
 
 @media (max-width: 720px) {
     .myHome {
-        display: grid;
         grid-template-columns: 1fr;
     }
 
+    .myHomeleft {
+        order: 2;
+    }
+
+    .myHomenext {
+        order: 1;
+    }
 }
 
 @media (max-width: 480px) {
     .myHome {
-        display: grid;
         grid-template-columns: 1fr;
         padding: 0;
         margin: 0;
         background-color: rgb(244, 249, 253);
+    }
+
+    .TypeText {
+        padding-left: -10px;
     }
 
     .myHomeleft {
@@ -289,6 +311,8 @@
         margin-right: 20px;
         padding-left: 20px;
         padding-top: 50px;
+        padding-bottom: 50px;
+        order: 2;
     }
 
     .imME {
@@ -298,7 +322,8 @@
 
     .myHomenext {
         padding-top: 50px;
-        padding-bottom: 50px;
+        padding-bottom: 10px;
+        order: 1;
     }
 
     .Nameis {
@@ -335,14 +360,7 @@
     .ObjectiveText {
         opacity: 0.7;
     }
-
-
 }
-
-/*-----------------------------------------Home -----------------------------------*/
-
-
-
 
 /*-----------------------------------------Skills Container -----------------------------------*/
 .SkillsContainer {
@@ -434,8 +452,8 @@
     .SkilssPara {
         color: rgb(82, 82, 82);
         padding-top: 80px;
-        padding-right: 40px;
-        padding-left: 5px;
+        padding-right: 42px;
+        padding-left: 1px;
         text-align: justify;
     }
 
@@ -488,33 +506,6 @@
     transition: 1s ease-out;
     transition-delay: 0.1s;
     border-radius: 10px;
-}
-
-.SkillsDisplay:hover {
-    .ProgressPercent1 {
-        width: 90%;
-        background-color: rgb(241, 88, 177);
-    }
-
-    .ProgressPercent2 {
-        width: 90%;
-        background-color: rgb(74, 202, 117);
-    }
-
-    .ProgressPercent3 {
-        width: 75%;
-        background-color: rgb(129, 34, 207);
-    }
-
-    .ProgressPercent4 {
-        width: 80%;
-        background-color: rgb(19, 68, 160);
-    }
-
-    .ProgressPercent5 {
-        width: 80%;
-        background-color: rgb(35, 139, 224);
-    }
 }
 
 .SkillShowBar {
@@ -666,6 +657,7 @@
 }
 
 .ReadMore {
+    cursor: pointer;
     margin-top: 10px;
 }
 
@@ -1045,6 +1037,78 @@
     transform: scale(1.1);
 }
 
+/*-------------------------------Designs---------------------------------*/
+.DesinContainer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #f2f5f8;
+}
+
+.MyProducts {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.MyProducts1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 20px;
+}
+
+.MyProducts2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 20px;
+}
+
+.Product {
+    border: 1px solid rgb(97, 97, 97);
+    height: 230px;
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ImProduct {
+    width: 210px;
+    height: 210px;
+    object-fit: contain;
+}
+
+@media (max-width: 480px) {
+
+    .MyProducts,
+    .MyProducts1 {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+
+    .Product {
+        height: 150px;
+        width: 150px;
+    }
+
+    .ImProduct {
+        width: 140px;
+        height: 140px;
+        object-fit: contain;
+    }
+}
+
+
 /*-------------------------------Contact---------------------------------*/
 .ProfileContainer {
     margin-top: 50px;
@@ -1059,6 +1123,7 @@
     margin-top: 100px;
     margin-bottom: 100px;
     transition: 0.5s ease-out;
+    opacity: 0;
 }
 
 .profileHead2 {

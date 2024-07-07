@@ -10,7 +10,7 @@ const Contact = () => {
     })
 
     const applyStyles = () => {
-        const imgElement = document.querySelector('.ImProfile');
+        const imgElement = document.querySelector('.ProfileItemLeft');
         if (imgElement) {
             imgElement.style.transform = 'translateY(-50px)';
             imgElement.style.opacity = '1';
@@ -26,7 +26,7 @@ const Contact = () => {
     }, [inView])
 
     return (
-        <div className='ProfileContainer' id='ProfileContainer'>
+        <div className='ProfileContainer' id='ProfileContainer' ref={ref}>
             <div className='ProfileItemLeft'>
                 <div>
                     <h5 className='ProfileHead1'>

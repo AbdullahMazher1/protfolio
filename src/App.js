@@ -10,6 +10,7 @@ import Newprojects from './components/Newprojects'
 import Contact from './components/Contact';
 import Values from './components/Values'
 import Footer from './components/Footer'
+import Designs from './components/Designs'
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
       <Services />
       <Profile />
       <Newprojects />
+      <Designs/>
       <Contact />
       <Values />
       <Footer />
