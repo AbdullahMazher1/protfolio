@@ -18,7 +18,7 @@ export default function SkillSet() {
                     </div>
                     <div>
                         <p className='SkilssPara'>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                            I am a proficient MEAN stack developer with extensive experience in creating dynamic web applications. With 3 years dedicated to front-end development and 1 year specializing in Node.js, I have honed his skills in delivering robust, responsive, and efficient software solutions. 
                         </p>
                     </div>
                 </div>

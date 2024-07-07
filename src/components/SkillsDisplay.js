@@ -41,7 +41,7 @@ export default function SkillsDisplay() {
       <div className='SkillsNext' ref={ref}>
         <div>
           <h2 className='SkillsShowHead'>
-            Front-End Development Expertise
+            Web Development Expertise
           </h2>
         </div>
         <div className='SkillShowBar' >
@@ -72,7 +72,7 @@ export default function SkillsDisplay() {
         </div>
         <div className='SkillShowBar'>
           <div>
-            JS,TS
+            node.js
           </div>
           <div className='ProgressBar'>
             <div className='ProgressPercent3'>

@@ -1,8 +1,28 @@
 import React, { useState, useEffect } from 'react';
+import { InView, useInView } from 'react-intersection-observer';
 
 export default function Designs() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
 
+    const [ref, inView] = useInView({
+        threshold: 0.2,
+        triggerOnce: true,
+    });
+
+    const slideup = () => {
+        const container = ref.current;
+        if (container) {
+            container.style.paddingTop = '-50px';
+        }
+    };
+
+    useEffect(() => {
+        if (inView) {
+            setTimeout(() => {
+                slideup();
+            }, 200);
+        }
+    }, [inView]);
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 480);
@@ -16,11 +36,11 @@ export default function Designs() {
     }, []);
 
     return (
-        <div className='DesinContainer'>
+        <div className='DesinContainer' ref={ref}>
             <div className='ProjectsUpper'>
                 <h2 className='NewProjectsHead'>Crafted Designs</h2>
                 <p className='ProjectsPara'>
-                    At AMA Solutions, we have successfully delivered numerous projects across web, mobile, and desktop platforms. Our projects range from responsive websites and high-performance mobile applications to robust desktop software, all tailored to meet specific business needs.
+                    I have successfully delivered numerous projects across web, mobile, and desktop platforms. Our projects range from responsive websites and high-performance mobile applications to robust desktop software, all tailored to meet specific business needs.
                 </p>
             </div>
             {isMobile ? (

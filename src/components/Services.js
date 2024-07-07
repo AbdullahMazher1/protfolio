@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Services() {
+
     return (
         <div className='ServiveContainer'>
             <div className='ServicesTop'>
@@ -9,9 +10,7 @@ export default function Services() {
                         Web Development
                     </h2>
                     <p className='WebPara'>
-                        We can create and maintain your
-                        software so that you can focus on
-                        revenue streams.
+                        I can optimize your website using the MEAN stack, leveraging MongoDB, Express.js, Angular, and Node.js for peak performance and scalability.
                     </p>
                     <img className='WebIcon Web' src='5.png' />
                     <div className='ReadMore'>
@@ -23,9 +22,7 @@ export default function Services() {
                         iOS Development
                     </h2>
                     <p className='WebPara'>
-                        We can create and maintain your
-                        software so that you can focus on
-                        revenue streams.
+                        I can engineer your iOS mobile app with Flutter, utilizing Dart for development, Flutter's widgets for UI design, and Firebase for backend scalability.
                     </p>
                     <img className='WebIcon ios' src='6.png' />
                     <div className='ReadMore'>
@@ -37,9 +34,7 @@ export default function Services() {
                         Soft Development
                     </h2>
                     <p className='WebPara '>
-                        We can create and maintain your
-                        software so that you can focus on
-                        revenue streams.
+                        I can develop your software using Agile methodologies like Scrum, ensuring iterative development, collaboration, and adaptability throughout the project lifecycle.
                     </p>
                     <img className='WebIcon soft' src='02.png' />
                     <div className='ReadMore'>
@@ -51,9 +46,7 @@ export default function Services() {
                         Wordpress Developer
                     </h2>
                     <p className='WebPara'>
-                        We can create and maintain your
-                        software so that you can focus on
-                        revenue streams.
+                        I can develop your WordPress site, utilizing its robust CMS capabilities, extensive plugin ecosystem for customization, and responsive themes for optimal user experience.
                     </p>
                     <img className='WebIcon wordpress' src='9.png' />
                     <div className='ReadMore'>
@@ -65,12 +58,10 @@ export default function Services() {
                         Graphic Designer
                     </h2>
                     <p className='WebPara'>
-                        We can create and maintain your
-                        software so that you can focus on
-                        revenue streams.
+                        I can create stunning designs using Photoshop and Illustrator, advanced tools for precise editing, high-resolution graphics integration between design elements.
                     </p>
                     <img className='WebIcon Graphic' src='10.png' />
-                    <div className='ReadMore'>
+                    <div className='ReadMore' >
                         Read More
                     </div>
                 </div>
@@ -79,9 +70,7 @@ export default function Services() {
                         Product Designer
                     </h2>
                     <p className='WebPara'>
-                        We can create and maintain your
-                        software so that you can focus on
-                        revenue streams.
+                        I can design your product using Figma, with collaborative features for team integration, an intuitive interface for prototyping, and comprehensive design tools for user-centered experiences.
                     </p>
                     <img className='WebIcon product' src='7.png' />
                     <div className='ReadMore'>
@@ -94,4 +83,5 @@ export default function Services() {
             </div>
         </div>
     )
+
 }

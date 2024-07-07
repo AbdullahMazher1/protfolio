@@ -80,7 +80,7 @@ export default function Profile() {
               </div>
               <div>
                 <p className='Company1Discp'>
-                  Worked as an IT Specialist under a dedicated and expert team, where I gained extensive hands-on experience in managing servers, handling SQL databases, and working with networks.
+                Worked as a Media Graphic Designer, collaborating remotely with a dedicated team. Developed creative solutions using Photoshop and Illustrator, contributing to visual assets for various projects and enhancing brand aesthetics.
                 </p>
               </div>
             </div>

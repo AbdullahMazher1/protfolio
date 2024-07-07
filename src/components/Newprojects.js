@@ -92,7 +92,7 @@ export default function Newprojects() {
       <div className='ProjectsUpper'>
         <h2 className='NewProjectsHead'>Deployed Projects</h2>
         <p className='ProjectsPara'>
-          At AMA Solutions, we have successfully delivered numerous projects across web, mobile, and desktop platforms. Our projects range from responsive websites and high-performance mobile applications to robust desktop software, all tailored to meet specific business needs.
+          I have successfully delivered numerous projects across web, mobile, and desktop platforms. Our projects range from responsive websites and high-performance mobile applications to robust desktop software, all tailored to meet specific business needs.
         </p>
       </div>
       <div className='NewProjectsBottom'>

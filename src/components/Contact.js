@@ -35,7 +35,7 @@ const Contact = () => {
                 </div>
                 <div className='profileHead2'>
                     <p>
-                        At AMA Solutions, our team consists of dedicated professionals that exceed client expectations and leveraging the latest industry trends and technologies.We believe in learn well,work well and live well.
+                    Contact me directly where I lead a team of dedicated professionals committed to surpassing client expectations. We specialize in integrating cutting-edge industry trends and technologies to deliver exceptional results. At AMA Solutions, we prioritize a balanced approach to learning, working, and living well.
                     </p>
 
                 </div>

@@ -97,6 +97,7 @@ export default function Home() {
                 </div>
                 <div>
                     <p className='ObjectiveText'>
+                        <h6 className='AboutHead'>BS Computer Science, UET'25 || Mean Stack Developer.</h6>
                         A driven and dedicated individual with a strong work ethic and a sense of responsibility. Committed to
                         continuous improvement and eager to glean insights from every experience, I am poised to contribute to the
                         betterment of our nation by applying the knowledge acquired along my journey.
